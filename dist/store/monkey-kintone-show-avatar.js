@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                monkey-kintone-show-avatar
 // @namespace           https://github.com/forestsheep911/monkey-kintone-show-avatar
-// @version             0.0.1
+// @version             0.0.2
 // @description         show kintone avatar easily
 // @author              boccaroo
 // @copyright           boccaroo
@@ -73,13 +73,14 @@ var app = function () {
                             }
                         }
                         usericon.onload = function () {
-                            usericon.style.position = 'absolute';
+                            usericon.style.position = 'fixed';
                             usericon.style.display = 'block';
                             var me = e;
                             var leftOffset = me.clientX > window.innerWidth / 2 ? 0.25 : 0.75;
+                            usericon.style.width = window.innerWidth / 4 + 'px';
                             usericon.style.left = (window.innerWidth - usericon.width) * leftOffset + 'px';
                             usericon.style.top = (window.innerHeight - usericon.height) / 2 + 'px';
-                            usericon.style.zIndex = '2';
+                            usericon.style.zIndex = '9999';
                         };
                     });
                     element.addEventListener('mouseout', function () {
