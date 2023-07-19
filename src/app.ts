@@ -43,13 +43,14 @@ const app = () => {
             }
 
             usericon.onload = function () {
-              usericon.style.position = 'absolute'
+              usericon.style.position = 'fixed'
               usericon.style.display = 'block'
               const me = e as MouseEvent
               const leftOffset = me.clientX > window.innerWidth / 2 ? 0.25 : 0.75
+              usericon.style.width = window.innerWidth / 4 + 'px'
               usericon.style.left = (window.innerWidth - usericon.width) * leftOffset + 'px'
               usericon.style.top = (window.innerHeight - usericon.height) / 2 + 'px'
-              usericon.style.zIndex = '2'
+              usericon.style.zIndex = '9999'
             }
           })
 
