@@ -1,6 +1,6 @@
 {
   "name": "monkey-kintone-show-avatar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "show kintone avatar easily",
   "main": "./main.js",
   "scripts": {
